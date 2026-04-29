@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartKart Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>🛒 LahaKart</h2>
+
+    <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+
+    <div class="nav-buttons">
+        <button onclick="toggleDarkMode()">🌙</button>
+        <button onclick="showOrders()">📦 Orders</button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>Shop Smart, Live Better</h1>
+        <p>Best gadgets, fashion & accessories at amazing prices.</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </div>
+</section>
+
+<!-- Categories -->
+<section class="categories">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Electronics')">Electronics</button>
+    <button onclick="filterCategory('Fashion')">Fashion</button>
+    <button onclick="filterCategory('Accessories')">Accessories</button>
+</section>
+
+<div class="container">
+
+<h2 id="productsTitle">Products</h2>
+<div id="products" class="products"></div>
+
+<h2>❤️ Wishlist</h2>
+<div id="wishlist"></div>
+
+<h2>🛒 Cart</h2>
+<div id="cart"></div>
+
+<h3 id="total">Total: ₹0</h3>
+
+<!-- Checkout -->
+<div class="checkout-box">
+<h2>Checkout</h2>
+
+<input type="text" id="address" placeholder="Enter Delivery Address">
+
+<select id="payment">
+<option>Cash on Delivery</option>
+<option>UPI</option>
+<option>Card</option>
+</select>
+
+<button onclick="checkout()">Place Order</button>
+</div>
+
+</div>
+
+<!-- Orders Popup -->
+<div id="ordersPopup" class="popup">
+    <div class="popup-content">
+        <span onclick="closeOrders()">✖</span>
+        <h2>Order History</h2>
+        <div id="ordersList"></div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 SmartKart Pro | Built by Laharika</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
